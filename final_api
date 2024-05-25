@@ -210,7 +210,7 @@ all_pms_data = [
     }
   },
   {
-    "fosee": {
+    "fosse": {
       "Early Departure Rebat": "early departure fees",
       "Convention and Touris": "Other taxes",
       "Convention and Touris exemption": "Other taxes",
@@ -1801,9 +1801,10 @@ async def root():
   
 @app.post("/lineitem", response_class=JSONResponse)
 def get_openai_response(input_text: dict):
-    dataframe_json = input_text['DataFrame_Object']
+    dataframe_json = input_text["DataFrame_Object"]
+
     # Extract lineitem_desc and pms
-    lineitem_desc_list = [value['lineitem_desc'] for value in dataframe_json['dataframe']]
+    lineitem_desc_list = [value['lineitem_desc'] for value in dataframe_json]
     pms = input_text['pms']
 
     # Convert lineitem_desc list to comma-separated string
