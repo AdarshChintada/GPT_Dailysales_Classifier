@@ -1,12 +1,4 @@
-langchain
-langchain_openai 
-langchain_core
 python-dotenv
-langchain_community
-langserve
 fastapi
 uvicorn
-streamlit
-sse_starlette
-google-generativeai
-
+pymongo
